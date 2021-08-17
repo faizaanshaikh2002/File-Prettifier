@@ -5,7 +5,7 @@ def soldier(user_path, files_with_no_change, user_file_format):
     user_path = user_path
     files_with_no_change = files_with_no_change
     user_file_format = user_file_format
-    j = 1
+    k = 1
     os.chdir(user_path)
     files_in_folder = os.listdir(user_path)
     with open(files_with_no_change)as f:
@@ -16,8 +16,8 @@ def soldier(user_path, files_with_no_change, user_file_format):
             name, extension = os.path.splitext(files)
 
         if extension == user_file_format:
-            os.rename(files, f"{j}{user_file_format}")
-            j = j+1
+            os.rename(files, f"{k}{user_file_format}")
+            k = k+1
 
 
 if __name__ == '__main__':
